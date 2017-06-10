@@ -1,0 +1,95 @@
+<% if current_walker != nil  %>
+
+<div class="page-header">
+  <h3><%= current_walker.first_name %>'s Profile</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+
+      <dt>Profile Pic</dt>
+      <dd><img src="<%= current_walker.avatar %>" length=200 width =140></dd>
+
+      <dt>Username</dt>
+      <dd><%= current_walker.username %></dd>
+
+      <dt>First Name</dt>
+      <dd><%= current_walker.first_name %></dd>
+
+      <dt>Last Name</dt>
+      <dd><%= current_walker.last_name %></dd>
+
+      <dt>Years Of Experience</dt>
+      <dd><%= current_walker.years_of_experience%></dd>
+
+      <dt>Bio</dt>
+      <dd><%= current_walker.bio %></dd>
+
+      <dt>Location</dt>
+      <dd><%= current_walker.location %></dd>
+
+      <dt>Contact</dt>
+      <dd><%= current_walker.contact %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/" class="btn btn-primary">
+        Back
+      </a>
+    </div>
+    <div>_</div>
+    <div class="btn-group btn-group-justified">
+      <a href="/walkers/edit" class="btn btn-primary">
+        Edit My Profile
+      </a>
+    </div>
+  </div>
+</div>
+
+<% else %>
+
+<div class="page-header">
+  <h3><%= @walker.first_name %>'s Profile</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+
+      <dt>Profile Pic</dt>
+      <dd><img src="<%= @walker.avatar %>" length=200 width =140></dd>
+
+      <dt>Username</dt>
+      <dd><%= @walker.username %></dd>
+
+      <dt>First Name</dt>
+      <dd><%= @walker.first_name %></dd>
+
+      <dt>Last Name</dt>
+      <dd><%= @walker.last_name %></dd>
+
+      <dt>Years Of Experience</dt>
+      <dd><%= @walker.years_of_experience%></dd>
+
+      <dt>Bio</dt>
+      <dd><%= @walker.bio %></dd>
+
+      <dt>Location</dt>
+      <dd><%= @walker.location %></dd>
+
+      <dt>Contact</dt>
+      <dd><%= @walker.contact %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/walkers" class="btn btn-primary">
+        Back
+      </a>
+    </div>
+  </div>
+</div>
+
+<% end %>
